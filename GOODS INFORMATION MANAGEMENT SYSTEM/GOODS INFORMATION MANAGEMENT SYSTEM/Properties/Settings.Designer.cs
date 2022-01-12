@@ -26,6 +26,9 @@ namespace GOODS_INFORMATION_MANAGEMENT_SYSTEM.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=\"C:\\Users\\PC\\Documents\\GitHub" +
+            "\\CNPM_Project\\GOODS INFORMATION MANAGEMENT SYSTEM\\DBS.mdf\";Integrated Security=T" +
+            "rue;Connect Timeout=30")]
         public string ConString {
             get {
                 return ((string)(this["ConString"]));

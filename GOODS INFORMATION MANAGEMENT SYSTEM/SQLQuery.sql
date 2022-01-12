@@ -4,3 +4,5 @@ FULLNAME varchar(50),
 password varchar(20),
 Phone varchar(12)
 )
+
+select * from account

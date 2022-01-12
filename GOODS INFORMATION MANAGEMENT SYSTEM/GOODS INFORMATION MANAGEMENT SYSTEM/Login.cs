@@ -26,5 +26,12 @@ namespace GOODS_INFORMATION_MANAGEMENT_SYSTEM
         {
 
         }
+
+        private void BtnLogin_Click(object sender, EventArgs e)
+        {
+            Main main = new Main();
+            this.Hide();
+            main.ShowDialog();
+        }
     }
 }
