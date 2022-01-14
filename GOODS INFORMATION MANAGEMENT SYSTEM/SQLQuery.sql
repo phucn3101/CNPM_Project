@@ -12,4 +12,8 @@ phonenumber varchar(12) unique,
 password varchar(20)
 )
 
-select * from account
+create table category(
+id int IDENTITY(1,1) primary key,
+name varchar(30),
+description varchar(250),
+)

@@ -26,6 +26,9 @@ namespace GOODS_INFORMATION_MANAGEMENT_SYSTEM
             // TODO: This line of code loads data into the 'dBSDataSetACcount.account' table. You can move, or remove it, as needed.      
             fillGrid();
             fillGridCus();
+            fillGridCate();
+            //fillGridPro();
+            fillCate();
         }
 
         private void tabPage3_Click(object sender, EventArgs e)
@@ -65,9 +68,10 @@ namespace GOODS_INFORMATION_MANAGEMENT_SYSTEM
             }
             catch (Exception ex)
             {
+                MessageBox.Show("There are some error from account dbs " );
 
             }
-            
+
         }
 
         private void fillGridCus()
@@ -85,6 +89,7 @@ namespace GOODS_INFORMATION_MANAGEMENT_SYSTEM
             }
             catch (Exception ex)
             {
+                MessageBox.Show("There are some error from customer dbs ");
 
             }
 
@@ -202,5 +207,187 @@ namespace GOODS_INFORMATION_MANAGEMENT_SYSTEM
                 MessageBox.Show("There are some error!!!");
             }
         }
+
+        private void tabControl1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtcusid_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtcusname_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtcusphone_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtcuspass_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void groupBox2_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnaddcate_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                sqlConnection.Open();
+                SqlCommand sqlCommand = new SqlCommand("insert into category values('" + txtcatename.Text + "','" + txtcatedescription.Text + "')", sqlConnection);
+                sqlCommand.ExecuteNonQuery();
+                MessageBox.Show("ADD successful");
+                sqlConnection.Close();
+                fillGridCate();
+            }
+            catch
+            {
+                MessageBox.Show("There are some error!!!");
+            }
+        }
+
+        private void btnupdatecate_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                sqlConnection.Open();
+                SqlCommand sqlCommand = new SqlCommand("update category set name='" + txtcatename.Text + "',description='" + txtcatedescription.Text + "' where id=" + txtcateid.Text, sqlConnection);
+                sqlCommand.ExecuteNonQuery();
+                MessageBox.Show("Update successful");
+                sqlConnection.Close();
+                fillGridCate();
+            }
+            catch
+            {
+                MessageBox.Show("There are some error!!!");
+            }
+        }
+
+        private void btndeletecate_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                sqlConnection.Open();
+                SqlCommand sqlCommand = new SqlCommand("delete from category where id=" + txtcateid.Text, sqlConnection);
+                sqlCommand.ExecuteNonQuery();
+                MessageBox.Show("Delete successful");
+                sqlConnection.Close();
+                fillGridCate();
+            }
+            catch
+            {
+                MessageBox.Show("There are some error!!!");
+            }
+        }
+
+        private void fillGridCate()
+        {
+            try
+            {
+                sqlConnection.Open();
+                SqlCommand sqlCommand = new SqlCommand("select * from category", sqlConnection);
+                SqlDataAdapter sqlDataAdapter = new SqlDataAdapter(sqlCommand);
+                DataTable dataTable = new DataTable();
+                sqlDataAdapter.Fill(dataTable);
+                gridcate.DataSource = dataTable;
+                sqlDataAdapter.Dispose();
+                sqlConnection.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("There are some error from category dbs");
+            }
+
+        }
+
+        private void gridcate_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            DataGridViewRow row = gridcate.Rows[e.RowIndex];
+            txtcateid.Text = row.Cells[0].Value.ToString();
+            txtcatename.Text = row.Cells[1].Value.ToString();
+            txtcatedescription.Text = row.Cells[2].Value.ToString();
+        }
+
+        private void girdproduct_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            DataGridViewRow row = gridcate.Rows[e.RowIndex];
+            txtcateid.Text = row.Cells[0].Value.ToString();
+            txtcatename.Text = row.Cells[1].Value.ToString();
+            txtcatedescription.Text = row.Cells[2].Value.ToString();
+        }
+
+        private void fillGridPro()
+        {
+            try
+            {
+                sqlConnection.Open();
+                SqlCommand sqlCommand = new SqlCommand("select * from product", sqlConnection);
+                SqlDataAdapter sqlDataAdapter = new SqlDataAdapter(sqlCommand);
+                DataTable dataTable = new DataTable();
+                sqlDataAdapter.Fill(dataTable);
+                TblView.DataSource = dataTable;
+                sqlDataAdapter.Dispose();
+                sqlConnection.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("There are some error from product dbs");
+            }
+
+        }
+
+        private void btnaddproduct_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void fillCate()
+        {
+
+            try {
+                sqlConnection.Open();
+                SqlCommand sqlCommand = new SqlCommand("select * from category", sqlConnection);
+                SqlDataAdapter sqlDataAdapter = new SqlDataAdapter(sqlCommand);
+                DataTable dataTable = new DataTable();
+                dataTable.Columns.Add("name", typeof(string));
+                SqlDataReader rd = sqlCommand.ExecuteReader();
+                dataTable.Load(rd);
+                combocate.ValueMember = "name";
+                combocate.DataSource = dataTable;
+                sqlConnection.Close();
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show("There are some error from category dbs ");
+
+            }
+
+
+        }
     }
+    
 }
