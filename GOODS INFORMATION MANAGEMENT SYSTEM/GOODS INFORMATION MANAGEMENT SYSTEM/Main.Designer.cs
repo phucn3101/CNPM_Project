@@ -45,7 +45,6 @@ namespace GOODS_INFORMATION_MANAGEMENT_SYSTEM
             this.addCus = new System.Windows.Forms.Button();
             this.updatecus = new System.Windows.Forms.Button();
             this.deletecus = new System.Windows.Forms.Button();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -60,56 +59,85 @@ namespace GOODS_INFORMATION_MANAGEMENT_SYSTEM
             this.btnUpdate = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
             this.TblView = new System.Windows.Forms.DataGridView();
-            this.tabPage4 = new System.Windows.Forms.TabPage();
-            this.accountBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.dBSDataSetACcount = new GOODS_INFORMATION_MANAGEMENT_SYSTEM.DBSDataSetACcount();
-            this.accountTableAdapter = new GOODS_INFORMATION_MANAGEMENT_SYSTEM.DBSDataSetACcountTableAdapters.accountTableAdapter();
-            this.girdproduct = new System.Windows.Forms.DataGridView();
-            this.gridcate = new System.Windows.Forms.DataGridView();
-            this.btndeleteproduct = new System.Windows.Forms.Button();
-            this.btnupdateproduct = new System.Windows.Forms.Button();
-            this.btnaddproduct = new System.Windows.Forms.Button();
-            this.txtproid = new System.Windows.Forms.TextBox();
-            this.txtproprice = new System.Windows.Forms.TextBox();
-            this.txtprodescription = new System.Windows.Forms.TextBox();
-            this.txtproname = new System.Windows.Forms.TextBox();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.label17 = new System.Windows.Forms.Label();
+            this.txtcatename = new System.Windows.Forms.TextBox();
+            this.btnaddcate = new System.Windows.Forms.Button();
+            this.btnupdatecate = new System.Windows.Forms.Button();
+            this.btndeletecate = new System.Windows.Forms.Button();
             this.label13 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.txtcatedescription = new System.Windows.Forms.TextBox();
             this.txtcateid = new System.Windows.Forms.TextBox();
-            this.btnaddcate = new System.Windows.Forms.Button();
-            this.btnupdatecate = new System.Windows.Forms.Button();
-            this.btndeletecate = new System.Windows.Forms.Button();
-            this.txtcatename = new System.Windows.Forms.TextBox();
-            this.label17 = new System.Windows.Forms.Label();
-            this.label18 = new System.Windows.Forms.Label();
+            this.gridcate = new System.Windows.Forms.DataGridView();
+            this.gridproduct = new System.Windows.Forms.DataGridView();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.label20 = new System.Windows.Forms.Label();
+            this.combocate = new System.Windows.Forms.ComboBox();
+            this.txtproquantity = new System.Windows.Forms.TextBox();
             this.txtproimg = new System.Windows.Forms.TextBox();
             this.label19 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.combocate = new System.Windows.Forms.ComboBox();
-            this.label20 = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.txtproname = new System.Windows.Forms.TextBox();
+            this.txtprodescription = new System.Windows.Forms.TextBox();
+            this.txtproprice = new System.Windows.Forms.TextBox();
+            this.txtproid = new System.Windows.Forms.TextBox();
+            this.btnaddproduct = new System.Windows.Forms.Button();
+            this.btnupdateproduct = new System.Windows.Forms.Button();
+            this.btndeleteproduct = new System.Windows.Forms.Button();
+            this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.accountBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dBSDataSetACcount = new GOODS_INFORMATION_MANAGEMENT_SYSTEM.DBSDataSetACcount();
+            this.accountTableAdapter = new GOODS_INFORMATION_MANAGEMENT_SYSTEM.DBSDataSetACcountTableAdapters.accountTableAdapter();
+            this.gridimport = new System.Windows.Forms.DataGridView();
+            this.girditemimport = new System.Windows.Forms.DataGridView();
+            this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.label21 = new System.Windows.Forms.Label();
+            this.label22 = new System.Windows.Forms.Label();
+            this.label23 = new System.Windows.Forms.Label();
+            this.label24 = new System.Windows.Forms.Label();
+            this.label25 = new System.Windows.Forms.Label();
+            this.label26 = new System.Windows.Forms.Label();
+            this.label27 = new System.Windows.Forms.Label();
+            this.txtimportname = new System.Windows.Forms.TextBox();
+            this.txtimportprice = new System.Windows.Forms.TextBox();
+            this.txtimportid = new System.Windows.Forms.TextBox();
+            this.addImport = new System.Windows.Forms.Button();
+            this.deleteimport = new System.Windows.Forms.Button();
+            this.btnadditem = new System.Windows.Forms.Button();
+            this.label28 = new System.Windows.Forms.Label();
+            this.label29 = new System.Windows.Forms.Label();
+            this.txtaddquantity = new System.Windows.Forms.TextBox();
+            this.txtaddproid = new System.Windows.Forms.TextBox();
+            this.gridshowimport = new System.Windows.Forms.DataGridView();
+            this.label30 = new System.Windows.Forms.Label();
+            this.txtaddbilld = new System.Windows.Forms.TextBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridcus)).BeginInit();
             this.groupBox2.SuspendLayout();
-            this.tabPage2.SuspendLayout();
             this.tabPage3.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.TblView)).BeginInit();
+            this.tabPage2.SuspendLayout();
+            this.groupBox4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gridcate)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridproduct)).BeginInit();
+            this.groupBox3.SuspendLayout();
+            this.tabPage4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.accountBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dBSDataSetACcount)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.girdproduct)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridcate)).BeginInit();
-            this.groupBox3.SuspendLayout();
-            this.groupBox4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gridimport)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.girditemimport)).BeginInit();
+            this.groupBox5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gridshowimport)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -123,6 +151,7 @@ namespace GOODS_INFORMATION_MANAGEMENT_SYSTEM
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(1097, 651);
             this.tabControl1.TabIndex = 0;
+            this.tabControl1.TabStop = false;
             this.tabControl1.SelectedIndexChanged += new System.EventHandler(this.tabControl1_SelectedIndexChanged);
             // 
             // tabPage1
@@ -278,20 +307,6 @@ namespace GOODS_INFORMATION_MANAGEMENT_SYSTEM
             this.deletecus.UseVisualStyleBackColor = true;
             this.deletecus.Click += new System.EventHandler(this.deletecus_Click);
             // 
-            // tabPage2
-            // 
-            this.tabPage2.Controls.Add(this.groupBox4);
-            this.tabPage2.Controls.Add(this.gridcate);
-            this.tabPage2.Controls.Add(this.girdproduct);
-            this.tabPage2.Controls.Add(this.groupBox3);
-            this.tabPage2.Location = new System.Drawing.Point(4, 22);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(1089, 625);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "manage product";
-            this.tabPage2.UseVisualStyleBackColor = true;
-            // 
             // tabPage3
             // 
             this.tabPage3.Controls.Add(this.groupBox1);
@@ -436,173 +451,20 @@ namespace GOODS_INFORMATION_MANAGEMENT_SYSTEM
             this.TblView.TabIndex = 5;
             this.TblView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
-            // tabPage4
+            // tabPage2
             // 
-            this.tabPage4.Location = new System.Drawing.Point(4, 22);
-            this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Size = new System.Drawing.Size(1089, 625);
-            this.tabPage4.TabIndex = 3;
-            this.tabPage4.Text = "tabPage4";
-            this.tabPage4.UseVisualStyleBackColor = true;
-            // 
-            // accountBindingSource
-            // 
-            this.accountBindingSource.DataMember = "account";
-            this.accountBindingSource.DataSource = this.dBSDataSetACcount;
-            // 
-            // dBSDataSetACcount
-            // 
-            this.dBSDataSetACcount.DataSetName = "DBSDataSetACcount";
-            this.dBSDataSetACcount.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // accountTableAdapter
-            // 
-            this.accountTableAdapter.ClearBeforeFill = true;
-            // 
-            // girdproduct
-            // 
-            this.girdproduct.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.girdproduct.Location = new System.Drawing.Point(624, 3);
-            this.girdproduct.Name = "girdproduct";
-            this.girdproduct.Size = new System.Drawing.Size(444, 420);
-            this.girdproduct.TabIndex = 9;
-            this.girdproduct.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.girdproduct_CellContentClick);
-            // 
-            // gridcate
-            // 
-            this.gridcate.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.gridcate.Location = new System.Drawing.Point(624, 441);
-            this.gridcate.Name = "gridcate";
-            this.gridcate.Size = new System.Drawing.Size(444, 174);
-            this.gridcate.TabIndex = 11;
-            this.gridcate.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridcate_CellContentClick);
-            // 
-            // btndeleteproduct
-            // 
-            this.btndeleteproduct.Location = new System.Drawing.Point(444, 368);
-            this.btndeleteproduct.Name = "btndeleteproduct";
-            this.btndeleteproduct.Size = new System.Drawing.Size(118, 43);
-            this.btndeleteproduct.TabIndex = 3;
-            this.btndeleteproduct.Text = "DELETE";
-            this.btndeleteproduct.UseVisualStyleBackColor = true;
-            // 
-            // btnupdateproduct
-            // 
-            this.btnupdateproduct.Location = new System.Drawing.Point(257, 368);
-            this.btnupdateproduct.Name = "btnupdateproduct";
-            this.btnupdateproduct.Size = new System.Drawing.Size(118, 43);
-            this.btnupdateproduct.TabIndex = 2;
-            this.btnupdateproduct.Text = "UPDATE";
-            this.btnupdateproduct.UseVisualStyleBackColor = true;
-            // 
-            // btnaddproduct
-            // 
-            this.btnaddproduct.Location = new System.Drawing.Point(70, 368);
-            this.btnaddproduct.Name = "btnaddproduct";
-            this.btnaddproduct.Size = new System.Drawing.Size(118, 43);
-            this.btnaddproduct.TabIndex = 1;
-            this.btnaddproduct.Text = "ADD";
-            this.btnaddproduct.UseVisualStyleBackColor = true;
-            this.btnaddproduct.Click += new System.EventHandler(this.btnaddproduct_Click);
-            // 
-            // txtproid
-            // 
-            this.txtproid.Enabled = false;
-            this.txtproid.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtproid.Location = new System.Drawing.Point(222, 35);
-            this.txtproid.Name = "txtproid";
-            this.txtproid.Size = new System.Drawing.Size(320, 26);
-            this.txtproid.TabIndex = 4;
-            // 
-            // txtproprice
-            // 
-            this.txtproprice.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtproprice.Location = new System.Drawing.Point(222, 180);
-            this.txtproprice.Name = "txtproprice";
-            this.txtproprice.Size = new System.Drawing.Size(320, 26);
-            this.txtproprice.TabIndex = 5;
-            // 
-            // txtprodescription
-            // 
-            this.txtprodescription.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtprodescription.Location = new System.Drawing.Point(222, 133);
-            this.txtprodescription.Name = "txtprodescription";
-            this.txtprodescription.Size = new System.Drawing.Size(320, 26);
-            this.txtprodescription.TabIndex = 6;
-            // 
-            // txtproname
-            // 
-            this.txtproname.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtproname.Location = new System.Drawing.Point(222, 82);
-            this.txtproname.Name = "txtproname";
-            this.txtproname.Size = new System.Drawing.Size(320, 26);
-            this.txtproname.TabIndex = 7;
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(35, 41);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(82, 20);
-            this.label12.TabIndex = 8;
-            this.label12.Text = "Product Id";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(67, 186);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(44, 20);
-            this.label11.TabIndex = 9;
-            this.label11.Text = "Price";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(66, 88);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(51, 20);
-            this.label10.TabIndex = 10;
-            this.label10.Text = "Name";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(28, 139);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(89, 20);
-            this.label9.TabIndex = 11;
-            this.label9.Text = "Description";
-            // 
-            // groupBox3
-            // 
-            this.groupBox3.Controls.Add(this.label20);
-            this.groupBox3.Controls.Add(this.combocate);
-            this.groupBox3.Controls.Add(this.textBox1);
-            this.groupBox3.Controls.Add(this.txtproimg);
-            this.groupBox3.Controls.Add(this.label19);
-            this.groupBox3.Controls.Add(this.label18);
-            this.groupBox3.Controls.Add(this.label9);
-            this.groupBox3.Controls.Add(this.label10);
-            this.groupBox3.Controls.Add(this.label11);
-            this.groupBox3.Controls.Add(this.label12);
-            this.groupBox3.Controls.Add(this.txtproname);
-            this.groupBox3.Controls.Add(this.txtprodescription);
-            this.groupBox3.Controls.Add(this.txtproprice);
-            this.groupBox3.Controls.Add(this.txtproid);
-            this.groupBox3.Controls.Add(this.btnaddproduct);
-            this.groupBox3.Controls.Add(this.btnupdateproduct);
-            this.groupBox3.Controls.Add(this.btndeleteproduct);
-            this.groupBox3.Location = new System.Drawing.Point(21, 6);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(587, 417);
-            this.groupBox3.TabIndex = 10;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "PRODUCT";
+            this.tabPage2.Controls.Add(this.groupBox4);
+            this.tabPage2.Controls.Add(this.gridcate);
+            this.tabPage2.Controls.Add(this.gridproduct);
+            this.tabPage2.Controls.Add(this.groupBox3);
+            this.tabPage2.Location = new System.Drawing.Point(4, 22);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(1089, 625);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "manage product";
+            this.tabPage2.UseVisualStyleBackColor = true;
+            this.tabPage2.Click += new System.EventHandler(this.tabPage2_Click);
             // 
             // groupBox4
             // 
@@ -623,6 +485,54 @@ namespace GOODS_INFORMATION_MANAGEMENT_SYSTEM
             this.groupBox4.TabIndex = 13;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "CATEGORY";
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.Location = new System.Drawing.Point(51, 91);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(89, 20);
+            this.label17.TabIndex = 13;
+            this.label17.Text = "Description";
+            // 
+            // txtcatename
+            // 
+            this.txtcatename.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtcatename.Location = new System.Drawing.Point(224, 50);
+            this.txtcatename.Name = "txtcatename";
+            this.txtcatename.Size = new System.Drawing.Size(320, 26);
+            this.txtcatename.TabIndex = 12;
+            // 
+            // btnaddcate
+            // 
+            this.btnaddcate.Location = new System.Drawing.Point(53, 126);
+            this.btnaddcate.Name = "btnaddcate";
+            this.btnaddcate.Size = new System.Drawing.Size(118, 47);
+            this.btnaddcate.TabIndex = 1;
+            this.btnaddcate.Text = "ADD";
+            this.btnaddcate.UseVisualStyleBackColor = true;
+            this.btnaddcate.Click += new System.EventHandler(this.btnaddcate_Click);
+            // 
+            // btnupdatecate
+            // 
+            this.btnupdatecate.Location = new System.Drawing.Point(239, 126);
+            this.btnupdatecate.Name = "btnupdatecate";
+            this.btnupdatecate.Size = new System.Drawing.Size(118, 47);
+            this.btnupdatecate.TabIndex = 2;
+            this.btnupdatecate.Text = "UPDATE";
+            this.btnupdatecate.UseVisualStyleBackColor = true;
+            this.btnupdatecate.Click += new System.EventHandler(this.btnupdatecate_Click);
+            // 
+            // btndeletecate
+            // 
+            this.btndeletecate.Location = new System.Drawing.Point(426, 126);
+            this.btndeletecate.Name = "btndeletecate";
+            this.btndeletecate.Size = new System.Drawing.Size(118, 47);
+            this.btndeletecate.TabIndex = 3;
+            this.btndeletecate.Text = "DELETE";
+            this.btndeletecate.UseVisualStyleBackColor = true;
+            this.btndeletecate.Click += new System.EventHandler(this.btndeletecate_Click);
             // 
             // label13
             // 
@@ -679,63 +589,76 @@ namespace GOODS_INFORMATION_MANAGEMENT_SYSTEM
             this.txtcateid.Size = new System.Drawing.Size(320, 26);
             this.txtcateid.TabIndex = 4;
             // 
-            // btnaddcate
+            // gridcate
             // 
-            this.btnaddcate.Location = new System.Drawing.Point(53, 126);
-            this.btnaddcate.Name = "btnaddcate";
-            this.btnaddcate.Size = new System.Drawing.Size(118, 47);
-            this.btnaddcate.TabIndex = 1;
-            this.btnaddcate.Text = "ADD";
-            this.btnaddcate.UseVisualStyleBackColor = true;
-            this.btnaddcate.Click += new System.EventHandler(this.btnaddcate_Click);
+            this.gridcate.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.gridcate.Location = new System.Drawing.Point(624, 441);
+            this.gridcate.Name = "gridcate";
+            this.gridcate.Size = new System.Drawing.Size(444, 174);
+            this.gridcate.TabIndex = 11;
+            this.gridcate.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridcate_CellContentClick);
             // 
-            // btnupdatecate
+            // gridproduct
             // 
-            this.btnupdatecate.Location = new System.Drawing.Point(239, 126);
-            this.btnupdatecate.Name = "btnupdatecate";
-            this.btnupdatecate.Size = new System.Drawing.Size(118, 47);
-            this.btnupdatecate.TabIndex = 2;
-            this.btnupdatecate.Text = "UPDATE";
-            this.btnupdatecate.UseVisualStyleBackColor = true;
-            this.btnupdatecate.Click += new System.EventHandler(this.btnupdatecate_Click);
+            this.gridproduct.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.gridproduct.Location = new System.Drawing.Point(624, 3);
+            this.gridproduct.Name = "gridproduct";
+            this.gridproduct.Size = new System.Drawing.Size(444, 420);
+            this.gridproduct.TabIndex = 9;
+            this.gridproduct.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.girdproduct_CellContentClick);
             // 
-            // btndeletecate
+            // groupBox3
             // 
-            this.btndeletecate.Location = new System.Drawing.Point(426, 126);
-            this.btndeletecate.Name = "btndeletecate";
-            this.btndeletecate.Size = new System.Drawing.Size(118, 47);
-            this.btndeletecate.TabIndex = 3;
-            this.btndeletecate.Text = "DELETE";
-            this.btndeletecate.UseVisualStyleBackColor = true;
-            this.btndeletecate.Click += new System.EventHandler(this.btndeletecate_Click);
+            this.groupBox3.Controls.Add(this.label20);
+            this.groupBox3.Controls.Add(this.combocate);
+            this.groupBox3.Controls.Add(this.txtproquantity);
+            this.groupBox3.Controls.Add(this.txtproimg);
+            this.groupBox3.Controls.Add(this.label19);
+            this.groupBox3.Controls.Add(this.label18);
+            this.groupBox3.Controls.Add(this.label9);
+            this.groupBox3.Controls.Add(this.label10);
+            this.groupBox3.Controls.Add(this.label11);
+            this.groupBox3.Controls.Add(this.label12);
+            this.groupBox3.Controls.Add(this.txtproname);
+            this.groupBox3.Controls.Add(this.txtprodescription);
+            this.groupBox3.Controls.Add(this.txtproprice);
+            this.groupBox3.Controls.Add(this.txtproid);
+            this.groupBox3.Controls.Add(this.btnaddproduct);
+            this.groupBox3.Controls.Add(this.btnupdateproduct);
+            this.groupBox3.Controls.Add(this.btndeleteproduct);
+            this.groupBox3.Location = new System.Drawing.Point(21, 6);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(587, 417);
+            this.groupBox3.TabIndex = 10;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "PRODUCT";
             // 
-            // txtcatename
+            // label20
             // 
-            this.txtcatename.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtcatename.Location = new System.Drawing.Point(224, 50);
-            this.txtcatename.Name = "txtcatename";
-            this.txtcatename.Size = new System.Drawing.Size(320, 26);
-            this.txtcatename.TabIndex = 12;
+            this.label20.AutoSize = true;
+            this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label20.Location = new System.Drawing.Point(44, 241);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(73, 20);
+            this.label20.TabIndex = 18;
+            this.label20.Text = "Category";
             // 
-            // label17
+            // combocate
             // 
-            this.label17.AutoSize = true;
-            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.Location = new System.Drawing.Point(51, 91);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(89, 20);
-            this.label17.TabIndex = 13;
-            this.label17.Text = "Description";
+            this.combocate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.combocate.FormattingEnabled = true;
+            this.combocate.Location = new System.Drawing.Point(222, 233);
+            this.combocate.Name = "combocate";
+            this.combocate.Size = new System.Drawing.Size(320, 28);
+            this.combocate.TabIndex = 17;
             // 
-            // label18
+            // txtproquantity
             // 
-            this.label18.AutoSize = true;
-            this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.Location = new System.Drawing.Point(49, 289);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(68, 20);
-            this.label18.TabIndex = 12;
-            this.label18.Text = "Quantity";
+            this.txtproquantity.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtproquantity.Location = new System.Drawing.Point(222, 283);
+            this.txtproquantity.Name = "txtproquantity";
+            this.txtproquantity.Size = new System.Drawing.Size(320, 26);
+            this.txtproquantity.TabIndex = 16;
             // 
             // txtproimg
             // 
@@ -755,32 +678,378 @@ namespace GOODS_INFORMATION_MANAGEMENT_SYSTEM
             this.label19.TabIndex = 14;
             this.label19.Text = "IMG";
             // 
-            // textBox1
+            // label18
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(222, 283);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(320, 26);
-            this.textBox1.TabIndex = 16;
+            this.label18.AutoSize = true;
+            this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label18.Location = new System.Drawing.Point(49, 289);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(68, 20);
+            this.label18.TabIndex = 12;
+            this.label18.Text = "Quantity";
             // 
-            // combocate
+            // label9
             // 
-            this.combocate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.combocate.FormattingEnabled = true;
-            this.combocate.Location = new System.Drawing.Point(222, 233);
-            this.combocate.Name = "combocate";
-            this.combocate.Size = new System.Drawing.Size(320, 28);
-            this.combocate.TabIndex = 17;
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(28, 139);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(89, 20);
+            this.label9.TabIndex = 11;
+            this.label9.Text = "Description";
             // 
-            // label20
+            // label10
             // 
-            this.label20.AutoSize = true;
-            this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.Location = new System.Drawing.Point(44, 241);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(73, 20);
-            this.label20.TabIndex = 18;
-            this.label20.Text = "Category";
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(66, 88);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(51, 20);
+            this.label10.TabIndex = 10;
+            this.label10.Text = "Name";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(67, 186);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(44, 20);
+            this.label11.TabIndex = 9;
+            this.label11.Text = "Price";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(35, 41);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(82, 20);
+            this.label12.TabIndex = 8;
+            this.label12.Text = "Product Id";
+            // 
+            // txtproname
+            // 
+            this.txtproname.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtproname.Location = new System.Drawing.Point(222, 82);
+            this.txtproname.Name = "txtproname";
+            this.txtproname.Size = new System.Drawing.Size(320, 26);
+            this.txtproname.TabIndex = 7;
+            // 
+            // txtprodescription
+            // 
+            this.txtprodescription.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtprodescription.Location = new System.Drawing.Point(222, 133);
+            this.txtprodescription.Name = "txtprodescription";
+            this.txtprodescription.Size = new System.Drawing.Size(320, 26);
+            this.txtprodescription.TabIndex = 6;
+            // 
+            // txtproprice
+            // 
+            this.txtproprice.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtproprice.Location = new System.Drawing.Point(222, 180);
+            this.txtproprice.Name = "txtproprice";
+            this.txtproprice.Size = new System.Drawing.Size(320, 26);
+            this.txtproprice.TabIndex = 5;
+            // 
+            // txtproid
+            // 
+            this.txtproid.Enabled = false;
+            this.txtproid.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtproid.Location = new System.Drawing.Point(222, 35);
+            this.txtproid.Name = "txtproid";
+            this.txtproid.Size = new System.Drawing.Size(320, 26);
+            this.txtproid.TabIndex = 4;
+            // 
+            // btnaddproduct
+            // 
+            this.btnaddproduct.Location = new System.Drawing.Point(70, 368);
+            this.btnaddproduct.Name = "btnaddproduct";
+            this.btnaddproduct.Size = new System.Drawing.Size(118, 43);
+            this.btnaddproduct.TabIndex = 1;
+            this.btnaddproduct.Text = "ADD";
+            this.btnaddproduct.UseVisualStyleBackColor = true;
+            this.btnaddproduct.Click += new System.EventHandler(this.btnaddproduct_Click);
+            // 
+            // btnupdateproduct
+            // 
+            this.btnupdateproduct.Location = new System.Drawing.Point(257, 368);
+            this.btnupdateproduct.Name = "btnupdateproduct";
+            this.btnupdateproduct.Size = new System.Drawing.Size(118, 43);
+            this.btnupdateproduct.TabIndex = 2;
+            this.btnupdateproduct.Text = "UPDATE";
+            this.btnupdateproduct.UseVisualStyleBackColor = true;
+            this.btnupdateproduct.Click += new System.EventHandler(this.btnupdateproduct_Click);
+            // 
+            // btndeleteproduct
+            // 
+            this.btndeleteproduct.Location = new System.Drawing.Point(444, 368);
+            this.btndeleteproduct.Name = "btndeleteproduct";
+            this.btndeleteproduct.Size = new System.Drawing.Size(118, 43);
+            this.btndeleteproduct.TabIndex = 3;
+            this.btndeleteproduct.Text = "DELETE";
+            this.btndeleteproduct.UseVisualStyleBackColor = true;
+            this.btndeleteproduct.Click += new System.EventHandler(this.btndeleteproduct_Click);
+            // 
+            // tabPage4
+            // 
+            this.tabPage4.Controls.Add(this.txtaddbilld);
+            this.tabPage4.Controls.Add(this.label30);
+            this.tabPage4.Controls.Add(this.gridshowimport);
+            this.tabPage4.Controls.Add(this.label28);
+            this.tabPage4.Controls.Add(this.label29);
+            this.tabPage4.Controls.Add(this.txtaddquantity);
+            this.tabPage4.Controls.Add(this.txtaddproid);
+            this.tabPage4.Controls.Add(this.btnadditem);
+            this.tabPage4.Controls.Add(this.groupBox5);
+            this.tabPage4.Controls.Add(this.girditemimport);
+            this.tabPage4.Controls.Add(this.gridimport);
+            this.tabPage4.Location = new System.Drawing.Point(4, 22);
+            this.tabPage4.Name = "tabPage4";
+            this.tabPage4.Size = new System.Drawing.Size(1089, 625);
+            this.tabPage4.TabIndex = 3;
+            this.tabPage4.Text = "Import Bill";
+            this.tabPage4.UseVisualStyleBackColor = true;
+            // 
+            // accountBindingSource
+            // 
+            this.accountBindingSource.DataMember = "account";
+            this.accountBindingSource.DataSource = this.dBSDataSetACcount;
+            // 
+            // dBSDataSetACcount
+            // 
+            this.dBSDataSetACcount.DataSetName = "DBSDataSetACcount";
+            this.dBSDataSetACcount.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // accountTableAdapter
+            // 
+            this.accountTableAdapter.ClearBeforeFill = true;
+            // 
+            // gridimport
+            // 
+            this.gridimport.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.gridimport.Location = new System.Drawing.Point(642, 3);
+            this.gridimport.Name = "gridimport";
+            this.gridimport.Size = new System.Drawing.Size(444, 382);
+            this.gridimport.TabIndex = 10;
+            this.gridimport.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridimport_CellContentClick);
+            // 
+            // girditemimport
+            // 
+            this.girditemimport.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.girditemimport.Location = new System.Drawing.Point(22, 401);
+            this.girditemimport.Name = "girditemimport";
+            this.girditemimport.Size = new System.Drawing.Size(587, 143);
+            this.girditemimport.TabIndex = 11;
+            this.girditemimport.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.girditemimport_CellContentClick);
+            // 
+            // groupBox5
+            // 
+            this.groupBox5.Controls.Add(this.label21);
+            this.groupBox5.Controls.Add(this.label22);
+            this.groupBox5.Controls.Add(this.label23);
+            this.groupBox5.Controls.Add(this.label24);
+            this.groupBox5.Controls.Add(this.label25);
+            this.groupBox5.Controls.Add(this.label26);
+            this.groupBox5.Controls.Add(this.label27);
+            this.groupBox5.Controls.Add(this.txtimportname);
+            this.groupBox5.Controls.Add(this.txtimportprice);
+            this.groupBox5.Controls.Add(this.txtimportid);
+            this.groupBox5.Controls.Add(this.addImport);
+            this.groupBox5.Controls.Add(this.deleteimport);
+            this.groupBox5.Location = new System.Drawing.Point(22, 6);
+            this.groupBox5.Name = "groupBox5";
+            this.groupBox5.Size = new System.Drawing.Size(587, 379);
+            this.groupBox5.TabIndex = 12;
+            this.groupBox5.TabStop = false;
+            this.groupBox5.Text = "PRODUCT";
+            this.groupBox5.Enter += new System.EventHandler(this.groupBox5_Enter);
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label21.Location = new System.Drawing.Point(44, 241);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(0, 20);
+            this.label21.TabIndex = 18;
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label22.Location = new System.Drawing.Point(77, 333);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(0, 20);
+            this.label22.TabIndex = 14;
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label23.Location = new System.Drawing.Point(49, 289);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(0, 20);
+            this.label23.TabIndex = 12;
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label24.Location = new System.Drawing.Point(70, 195);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(83, 20);
+            this.label24.TabIndex = 11;
+            this.label24.Text = "Total Price";
+            // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label25.Location = new System.Drawing.Point(26, 144);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(122, 20);
+            this.label25.TabIndex = 10;
+            this.label25.Text = "Company Name";
+            // 
+            // label26
+            // 
+            this.label26.AutoSize = true;
+            this.label26.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label26.Location = new System.Drawing.Point(76, 245);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(0, 20);
+            this.label26.TabIndex = 9;
+            // 
+            // label27
+            // 
+            this.label27.AutoSize = true;
+            this.label27.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label27.Location = new System.Drawing.Point(76, 97);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(61, 20);
+            this.label27.TabIndex = 8;
+            this.label27.Text = "BILL Id";
+            // 
+            // txtimportname
+            // 
+            this.txtimportname.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtimportname.Location = new System.Drawing.Point(231, 141);
+            this.txtimportname.Name = "txtimportname";
+            this.txtimportname.Size = new System.Drawing.Size(320, 26);
+            this.txtimportname.TabIndex = 7;
+            // 
+            // txtimportprice
+            // 
+            this.txtimportprice.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtimportprice.Location = new System.Drawing.Point(231, 192);
+            this.txtimportprice.Name = "txtimportprice";
+            this.txtimportprice.Size = new System.Drawing.Size(320, 26);
+            this.txtimportprice.TabIndex = 6;
+            // 
+            // txtimportid
+            // 
+            this.txtimportid.Enabled = false;
+            this.txtimportid.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtimportid.Location = new System.Drawing.Point(231, 94);
+            this.txtimportid.Name = "txtimportid";
+            this.txtimportid.Size = new System.Drawing.Size(320, 26);
+            this.txtimportid.TabIndex = 4;
+            // 
+            // addImport
+            // 
+            this.addImport.Location = new System.Drawing.Point(70, 310);
+            this.addImport.Name = "addImport";
+            this.addImport.Size = new System.Drawing.Size(118, 43);
+            this.addImport.TabIndex = 1;
+            this.addImport.Text = "ADD";
+            this.addImport.UseVisualStyleBackColor = true;
+            this.addImport.Click += new System.EventHandler(this.addImport_Click);
+            // 
+            // deleteimport
+            // 
+            this.deleteimport.Location = new System.Drawing.Point(444, 310);
+            this.deleteimport.Name = "deleteimport";
+            this.deleteimport.Size = new System.Drawing.Size(118, 43);
+            this.deleteimport.TabIndex = 3;
+            this.deleteimport.Text = "DELETE";
+            this.deleteimport.UseVisualStyleBackColor = true;
+            this.deleteimport.Click += new System.EventHandler(this.deleteimport_Click);
+            // 
+            // btnadditem
+            // 
+            this.btnadditem.Location = new System.Drawing.Point(716, 575);
+            this.btnadditem.Name = "btnadditem";
+            this.btnadditem.Size = new System.Drawing.Size(118, 43);
+            this.btnadditem.TabIndex = 19;
+            this.btnadditem.Text = "ADD ITEM";
+            this.btnadditem.UseVisualStyleBackColor = true;
+            this.btnadditem.Click += new System.EventHandler(this.btnadditem_Click);
+            // 
+            // label28
+            // 
+            this.label28.AutoSize = true;
+            this.label28.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label28.Location = new System.Drawing.Point(478, 598);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(68, 20);
+            this.label28.TabIndex = 23;
+            this.label28.Text = "Quantity";
+            // 
+            // label29
+            // 
+            this.label29.AutoSize = true;
+            this.label29.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label29.Location = new System.Drawing.Point(249, 598);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(82, 20);
+            this.label29.TabIndex = 22;
+            this.label29.Text = "Product Id";
+            // 
+            // txtaddquantity
+            // 
+            this.txtaddquantity.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtaddquantity.Location = new System.Drawing.Point(587, 592);
+            this.txtaddquantity.Name = "txtaddquantity";
+            this.txtaddquantity.Size = new System.Drawing.Size(105, 26);
+            this.txtaddquantity.TabIndex = 21;
+            // 
+            // txtaddproid
+            // 
+            this.txtaddproid.Enabled = false;
+            this.txtaddproid.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtaddproid.Location = new System.Drawing.Point(366, 592);
+            this.txtaddproid.Name = "txtaddproid";
+            this.txtaddproid.Size = new System.Drawing.Size(69, 26);
+            this.txtaddproid.TabIndex = 20;
+            // 
+            // gridshowimport
+            // 
+            this.gridshowimport.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.gridshowimport.Location = new System.Drawing.Point(642, 401);
+            this.gridshowimport.Name = "gridshowimport";
+            this.gridshowimport.Size = new System.Drawing.Size(444, 143);
+            this.gridshowimport.TabIndex = 24;
+            this.gridshowimport.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridshowimport_CellContentClick);
+            // 
+            // label30
+            // 
+            this.label30.AutoSize = true;
+            this.label30.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label30.Location = new System.Drawing.Point(66, 596);
+            this.label30.Name = "label30";
+            this.label30.Size = new System.Drawing.Size(45, 20);
+            this.label30.TabIndex = 26;
+            this.label30.Text = "Bill id";
+            // 
+            // txtaddbilld
+            // 
+            this.txtaddbilld.Enabled = false;
+            this.txtaddbilld.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtaddbilld.Location = new System.Drawing.Point(141, 592);
+            this.txtaddbilld.Name = "txtaddbilld";
+            this.txtaddbilld.Size = new System.Drawing.Size(69, 26);
+            this.txtaddbilld.TabIndex = 27;
             // 
             // Main
             // 
@@ -796,19 +1065,26 @@ namespace GOODS_INFORMATION_MANAGEMENT_SYSTEM
             ((System.ComponentModel.ISupportInitialize)(this.gridcus)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
-            this.tabPage2.ResumeLayout(false);
             this.tabPage3.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.TblView)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.accountBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dBSDataSetACcount)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.girdproduct)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridcate)).EndInit();
-            this.groupBox3.ResumeLayout(false);
-            this.groupBox3.PerformLayout();
+            this.tabPage2.ResumeLayout(false);
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gridcate)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridproduct)).EndInit();
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox3.PerformLayout();
+            this.tabPage4.ResumeLayout(false);
+            this.tabPage4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.accountBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dBSDataSetACcount)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridimport)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.girditemimport)).EndInit();
+            this.groupBox5.ResumeLayout(false);
+            this.groupBox5.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gridshowimport)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -862,7 +1138,7 @@ namespace GOODS_INFORMATION_MANAGEMENT_SYSTEM
         private System.Windows.Forms.TextBox txtcatedescription;
         private System.Windows.Forms.TextBox txtcateid;
         private System.Windows.Forms.DataGridView gridcate;
-        private System.Windows.Forms.DataGridView girdproduct;
+        private System.Windows.Forms.DataGridView gridproduct;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
@@ -880,6 +1156,29 @@ namespace GOODS_INFORMATION_MANAGEMENT_SYSTEM
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.ComboBox combocate;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtproquantity;
+        private System.Windows.Forms.GroupBox groupBox5;
+        private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.Label label22;
+        private System.Windows.Forms.Label label23;
+        private System.Windows.Forms.Label label24;
+        private System.Windows.Forms.Label label25;
+        private System.Windows.Forms.Label label26;
+        private System.Windows.Forms.Label label27;
+        private System.Windows.Forms.TextBox txtimportname;
+        private System.Windows.Forms.TextBox txtimportprice;
+        private System.Windows.Forms.TextBox txtimportid;
+        private System.Windows.Forms.Button addImport;
+        private System.Windows.Forms.Button deleteimport;
+        private System.Windows.Forms.DataGridView girditemimport;
+        private System.Windows.Forms.DataGridView gridimport;
+        private System.Windows.Forms.Button btnadditem;
+        private System.Windows.Forms.Label label28;
+        private System.Windows.Forms.Label label29;
+        private System.Windows.Forms.TextBox txtaddquantity;
+        private System.Windows.Forms.TextBox txtaddproid;
+        private System.Windows.Forms.DataGridView gridshowimport;
+        private System.Windows.Forms.TextBox txtaddbilld;
+        private System.Windows.Forms.Label label30;
     }
 }

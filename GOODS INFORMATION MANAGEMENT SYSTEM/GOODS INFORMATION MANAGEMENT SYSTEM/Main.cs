@@ -27,8 +27,10 @@ namespace GOODS_INFORMATION_MANAGEMENT_SYSTEM
             fillGrid();
             fillGridCus();
             fillGridCate();
-            //fillGridPro();
+            fillGridPro();
             fillCate();
+            fillimport();
+            fillItem();
         }
 
         private void tabPage3_Click(object sender, EventArgs e)
@@ -334,10 +336,14 @@ namespace GOODS_INFORMATION_MANAGEMENT_SYSTEM
 
         private void girdproduct_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            DataGridViewRow row = gridcate.Rows[e.RowIndex];
-            txtcateid.Text = row.Cells[0].Value.ToString();
-            txtcatename.Text = row.Cells[1].Value.ToString();
-            txtcatedescription.Text = row.Cells[2].Value.ToString();
+            DataGridViewRow row = gridproduct.Rows[e.RowIndex];
+            txtproid.Text = row.Cells[0].Value.ToString();
+            txtproname.Text = row.Cells[1].Value.ToString();
+            txtprodescription.Text = row.Cells[2].Value.ToString();
+            txtproprice.Text = row.Cells[3].Value.ToString();
+            combocate.SelectedItem = row.Cells[4].Value.ToString();
+            txtproquantity.Text = row.Cells[5].Value.ToString();
+            txtproimg.Text = row.Cells[6].Value.ToString();
         }
 
         private void fillGridPro()
@@ -349,7 +355,7 @@ namespace GOODS_INFORMATION_MANAGEMENT_SYSTEM
                 SqlDataAdapter sqlDataAdapter = new SqlDataAdapter(sqlCommand);
                 DataTable dataTable = new DataTable();
                 sqlDataAdapter.Fill(dataTable);
-                TblView.DataSource = dataTable;
+                gridproduct.DataSource = dataTable;
                 sqlDataAdapter.Dispose();
                 sqlConnection.Close();
             }
@@ -362,7 +368,19 @@ namespace GOODS_INFORMATION_MANAGEMENT_SYSTEM
 
         private void btnaddproduct_Click(object sender, EventArgs e)
         {
-
+            try
+            {
+                sqlConnection.Open();
+                SqlCommand sqlCommand = new SqlCommand("insert into product values('" + txtproname.Text + "','" + txtprodescription.Text + "'," + txtproprice.Text + ","+ combocate.SelectedValue.ToString() +"," + txtproquantity.Text + ",'"+txtproimg.Text+"')", sqlConnection);
+                sqlCommand.ExecuteNonQuery();
+                MessageBox.Show("ADD successful");
+                sqlConnection.Close();
+                fillGridPro();
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show("There are some error!!!"+ combocate.SelectedValue.ToString() +ex.Message.ToString());
+            }
         }
 
         private void fillCate()
@@ -376,7 +394,7 @@ namespace GOODS_INFORMATION_MANAGEMENT_SYSTEM
                 dataTable.Columns.Add("name", typeof(string));
                 SqlDataReader rd = sqlCommand.ExecuteReader();
                 dataTable.Load(rd);
-                combocate.ValueMember = "name";
+                combocate.ValueMember = "id";
                 combocate.DataSource = dataTable;
                 sqlConnection.Close();
             }
@@ -385,8 +403,193 @@ namespace GOODS_INFORMATION_MANAGEMENT_SYSTEM
                 MessageBox.Show("There are some error from category dbs ");
 
             }
+        }
 
+        private void btnupdateproduct_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                sqlConnection.Open();
+                SqlCommand sqlCommand = new SqlCommand("update product set name='" + txtproname.Text + "',description='" + txtprodescription.Text + "' ,price=" + txtproprice.Text + " ,categoryid="+ combocate.SelectedValue.ToString() + " ,quantity="+ txtproquantity.Text+ " ,img=' " + txtproimg.Text + "' where id=" + txtproid.Text, sqlConnection);
+                sqlCommand.ExecuteNonQuery();
+                MessageBox.Show("Update successful");
+                sqlConnection.Close();
+                fillGridPro();
+            }
+            catch
+            {
+                MessageBox.Show("There are some error!!!");
+            }
+        }
 
+        private void btndeleteproduct_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                sqlConnection.Open();
+                SqlCommand sqlCommand = new SqlCommand("delete from product where id=" + txtproid.Text, sqlConnection);
+                sqlCommand.ExecuteNonQuery();
+                MessageBox.Show("Delete successful");
+                sqlConnection.Close();
+                fillGridPro();
+            }
+            catch
+            {
+                MessageBox.Show("There are some error!!!");
+            }
+        }
+
+        private void groupBox5_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void addImport_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                sqlConnection.Open();
+                SqlCommand sqlCommand = new SqlCommand("insert into bill_import values(GETDATE(),'" + txtimportname.Text +"',NULL)", sqlConnection);
+                sqlCommand.ExecuteNonQuery();
+                MessageBox.Show("ADD successful");
+                sqlConnection.Close();
+                fillimport();
+            }
+            catch
+            {
+                MessageBox.Show("There are some error!!!");
+            }
+        }
+
+        private void gridimport_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            DataGridViewRow row = gridimport.Rows[e.RowIndex];
+            string id = row.Cells[0].Value.ToString();
+            txtaddbilld.Text = id;
+            fillAddeditem(id);
+        }
+
+        private void fillimport()
+        {
+            try
+            {
+                sqlConnection.Open();
+                SqlCommand sqlCommand = new SqlCommand("select * from bill_import", sqlConnection);
+                SqlDataAdapter sqlDataAdapter = new SqlDataAdapter(sqlCommand);
+                DataTable dataTable = new DataTable();
+                sqlDataAdapter.Fill(dataTable);
+                gridimport.DataSource = dataTable;
+                sqlDataAdapter.Dispose();
+                sqlConnection.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("There are some error from product dbs");
+            }
+        }
+
+        private void girditemimport_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            DataGridViewRow row = girditemimport.Rows[e.RowIndex];
+            txtaddproid.Text = row.Cells[0].Value.ToString();
+        }
+
+        private void tabPage2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void fillItem()
+        {
+            try
+            {
+                sqlConnection.Open();
+                SqlCommand sqlCommand = new SqlCommand("select * from product", sqlConnection);
+                SqlDataAdapter sqlDataAdapter = new SqlDataAdapter(sqlCommand);
+                DataTable dataTable = new DataTable();
+                sqlDataAdapter.Fill(dataTable);
+                girditemimport.DataSource = dataTable;
+                sqlDataAdapter.Dispose();
+                sqlConnection.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("There are some error from category dbs");
+            }
+        }
+
+        private void btnadditem_Click(object sender, EventArgs e)
+        {
+            if (txtaddproid.Text == "")
+            {
+                MessageBox.Show("Please select product");
+            }else if (txtaddbilld.Text == "")
+            {
+                MessageBox.Show("Please select Bill");
+            }
+            else if (txtaddbilld.Text == "")
+            {
+                MessageBox.Show("Please fill quantity");
+            }
+            else
+            {
+                try
+                {
+                    sqlConnection.Open();
+                    SqlCommand sqlCommand = new SqlCommand("insert into product_billimport values(" + txtaddbilld.Text + ","+ txtaddproid.Text+","+txtaddquantity.Text+")", sqlConnection);
+                    sqlCommand.ExecuteNonQuery();
+                    MessageBox.Show("ADD successful");
+                    sqlConnection.Close();
+                    fillAddeditem(txtaddbilld.Text);
+                }
+                catch
+                {
+                    MessageBox.Show("There are some error!!!");
+                }
+            }
+        }
+
+        private void gridshowimport_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void fillAddeditem(string id)
+        {
+            try
+            {
+                sqlConnection.Open();
+                SqlCommand sqlCommand = new SqlCommand("select name from product, product_billimport  where billid= id and id=" + id , sqlConnection);
+                SqlDataAdapter sqlDataAdapter = new SqlDataAdapter(sqlCommand);
+                DataTable dataTable = new DataTable();
+                sqlDataAdapter.Fill(dataTable);
+                gridshowimport.DataSource = dataTable;
+                sqlDataAdapter.Dispose();
+                sqlConnection.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("There are some error from category dbs");
+            }
+        }
+
+        private void deleteimport_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                sqlConnection.Open();
+                SqlCommand sqlCommand = new SqlCommand("delete from product_billimport where billid=" + txtaddbilld.Text, sqlConnection);
+                sqlCommand.ExecuteNonQuery(); 
+                sqlCommand = new SqlCommand("delete from bill_import where id=" + txtaddbilld.Text, sqlConnection);
+                sqlCommand.ExecuteNonQuery();
+                MessageBox.Show("Delete successful");
+                sqlConnection.Close();
+                fillimport();
+            }
+            catch
+            {
+                MessageBox.Show("There are some error!!!");
+            }
         }
     }
     
