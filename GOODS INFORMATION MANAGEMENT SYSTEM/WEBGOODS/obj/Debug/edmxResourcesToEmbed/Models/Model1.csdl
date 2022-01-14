@@ -1,0 +1,213 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DBSModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="account">
+    <Key>
+      <PropertyRef Name="username" />
+    </Key>
+    <Property Name="username" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="FULLNAME" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="password" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="Phone" Type="String" MaxLength="12" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="bill_import">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="datecreate" Type="DateTime" Precision="0" />
+    <Property Name="companyname" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="totalprice" Type="Int32" />
+    <NavigationProperty Name="product_billimport" Relationship="Self.FK__product_b__billi__00200768" FromRole="bill_import" ToRole="product_billimport" />
+  </EntityType>
+  <EntityType Name="cart">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="productid" Type="Int32" />
+    <Property Name="customerid" Type="Int32" />
+    <Property Name="quantity" Type="Int32" />
+    <NavigationProperty Name="customer" Relationship="Self.FK__cart__customerid__17036CC0" FromRole="cart" ToRole="customer" />
+    <NavigationProperty Name="product" Relationship="Self.FK__cart__productid__160F4887" FromRole="cart" ToRole="product" />
+  </EntityType>
+  <EntityType Name="category">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="description" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="products" Relationship="Self.FK__product__categor__6FE99F9F" FromRole="category" ToRole="product" />
+  </EntityType>
+  <EntityType Name="customer">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="fullname" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="phonenumber" Type="String" MaxLength="12" FixedLength="false" Unicode="false" />
+    <Property Name="password" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="carts" Relationship="Self.FK__cart__customerid__17036CC0" FromRole="customer" ToRole="cart" />
+    <NavigationProperty Name="customerbills" Relationship="Self.FK__customerb__custo__1AD3FDA4" FromRole="customer" ToRole="customerbill" />
+  </EntityType>
+  <EntityType Name="customerbill">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="productid" Type="Int32" />
+    <Property Name="customerid" Type="Int32" />
+    <Property Name="quantity" Type="Int32" />
+    <NavigationProperty Name="customer" Relationship="Self.FK__customerb__custo__1AD3FDA4" FromRole="customerbill" ToRole="customer" />
+    <NavigationProperty Name="product" Relationship="Self.FK__customerb__produ__19DFD96B" FromRole="customerbill" ToRole="product" />
+  </EntityType>
+  <EntityType Name="product">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="description" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="price" Type="Int32" />
+    <Property Name="categoryid" Type="Int32" />
+    <Property Name="quantity" Type="Int32" />
+    <Property Name="img" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="carts" Relationship="Self.FK__cart__productid__160F4887" FromRole="product" ToRole="cart" />
+    <NavigationProperty Name="category" Relationship="Self.FK__product__categor__6FE99F9F" FromRole="product" ToRole="category" />
+    <NavigationProperty Name="customerbills" Relationship="Self.FK__customerb__produ__19DFD96B" FromRole="product" ToRole="customerbill" />
+    <NavigationProperty Name="product_billimport" Relationship="Self.FK__product_b__produ__01142BA1" FromRole="product" ToRole="product_billimport" />
+  </EntityType>
+  <EntityType Name="product_billimport">
+    <Key>
+      <PropertyRef Name="billid" />
+      <PropertyRef Name="productid" />
+    </Key>
+    <Property Name="billid" Type="Int32" Nullable="false" />
+    <Property Name="productid" Type="Int32" Nullable="false" />
+    <Property Name="quantity" Type="Int32" />
+    <NavigationProperty Name="bill_import" Relationship="Self.FK__product_b__billi__00200768" FromRole="product_billimport" ToRole="bill_import" />
+    <NavigationProperty Name="product" Relationship="Self.FK__product_b__produ__01142BA1" FromRole="product_billimport" ToRole="product" />
+  </EntityType>
+  <Association Name="FK__product_b__billi__00200768">
+    <End Role="bill_import" Type="Self.bill_import" Multiplicity="1" />
+    <End Role="product_billimport" Type="Self.product_billimport" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="bill_import">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="product_billimport">
+        <PropertyRef Name="billid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__cart__customerid__17036CC0">
+    <End Role="customer" Type="Self.customer" Multiplicity="0..1" />
+    <End Role="cart" Type="Self.cart" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="customer">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="cart">
+        <PropertyRef Name="customerid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__cart__productid__160F4887">
+    <End Role="product" Type="Self.product" Multiplicity="0..1" />
+    <End Role="cart" Type="Self.cart" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="product">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="cart">
+        <PropertyRef Name="productid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__product__categor__6FE99F9F">
+    <End Role="category" Type="Self.category" Multiplicity="0..1" />
+    <End Role="product" Type="Self.product" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="category">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="product">
+        <PropertyRef Name="categoryid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__customerb__custo__1AD3FDA4">
+    <End Role="customer" Type="Self.customer" Multiplicity="0..1" />
+    <End Role="customerbill" Type="Self.customerbill" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="customer">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="customerbill">
+        <PropertyRef Name="customerid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__customerb__produ__19DFD96B">
+    <End Role="product" Type="Self.product" Multiplicity="0..1" />
+    <End Role="customerbill" Type="Self.customerbill" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="product">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="customerbill">
+        <PropertyRef Name="productid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__product_b__produ__01142BA1">
+    <End Role="product" Type="Self.product" Multiplicity="1" />
+    <End Role="product_billimport" Type="Self.product_billimport" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="product">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="product_billimport">
+        <PropertyRef Name="productid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="DBSEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="accounts" EntityType="Self.account" />
+    <EntitySet Name="bill_import" EntityType="Self.bill_import" />
+    <EntitySet Name="carts" EntityType="Self.cart" />
+    <EntitySet Name="categories" EntityType="Self.category" />
+    <EntitySet Name="customers" EntityType="Self.customer" />
+    <EntitySet Name="customerbills" EntityType="Self.customerbill" />
+    <EntitySet Name="products" EntityType="Self.product" />
+    <EntitySet Name="product_billimport" EntityType="Self.product_billimport" />
+    <AssociationSet Name="FK__product_b__billi__00200768" Association="Self.FK__product_b__billi__00200768">
+      <End Role="bill_import" EntitySet="bill_import" />
+      <End Role="product_billimport" EntitySet="product_billimport" />
+    </AssociationSet>
+    <AssociationSet Name="FK__cart__customerid__17036CC0" Association="Self.FK__cart__customerid__17036CC0">
+      <End Role="customer" EntitySet="customers" />
+      <End Role="cart" EntitySet="carts" />
+    </AssociationSet>
+    <AssociationSet Name="FK__cart__productid__160F4887" Association="Self.FK__cart__productid__160F4887">
+      <End Role="product" EntitySet="products" />
+      <End Role="cart" EntitySet="carts" />
+    </AssociationSet>
+    <AssociationSet Name="FK__product__categor__6FE99F9F" Association="Self.FK__product__categor__6FE99F9F">
+      <End Role="category" EntitySet="categories" />
+      <End Role="product" EntitySet="products" />
+    </AssociationSet>
+    <AssociationSet Name="FK__customerb__custo__1AD3FDA4" Association="Self.FK__customerb__custo__1AD3FDA4">
+      <End Role="customer" EntitySet="customers" />
+      <End Role="customerbill" EntitySet="customerbills" />
+    </AssociationSet>
+    <AssociationSet Name="FK__customerb__produ__19DFD96B" Association="Self.FK__customerb__produ__19DFD96B">
+      <End Role="product" EntitySet="products" />
+      <End Role="customerbill" EntitySet="customerbills" />
+    </AssociationSet>
+    <AssociationSet Name="FK__product_b__produ__01142BA1" Association="Self.FK__product_b__produ__01142BA1">
+      <End Role="product" EntitySet="products" />
+      <End Role="product_billimport" EntitySet="product_billimport" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

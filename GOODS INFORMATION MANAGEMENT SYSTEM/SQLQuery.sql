@@ -48,4 +48,24 @@ foreign key (productid) references product(id),
 primary key(billid,productid)
 )
 
+create table cart(
+id int IDENTITY(1,1) primary key,
+productid int, 
+customerid int,
+quantity int,
+foreign key (productid) references product(id),
+foreign key (customerid) references customer(id),
+)
+
+create table customerbill(
+id int IDENTITY(1,1) primary key,
+productid int, 
+customerid int,
+quantity int,
+foreign key (productid) references product(id),
+foreign key (customerid) references customer(id),
+)
+
+
+
 select price,product_billimport.quantity from product, product_billimport  where billid= id and id=4
