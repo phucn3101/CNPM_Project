@@ -93,11 +93,14 @@ namespace GOODS_INFORMATION_MANAGEMENT_SYSTEM
             this.btnupdateproduct = new System.Windows.Forms.Button();
             this.btndeleteproduct = new System.Windows.Forms.Button();
             this.tabPage4 = new System.Windows.Forms.TabPage();
-            this.accountBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.dBSDataSetACcount = new GOODS_INFORMATION_MANAGEMENT_SYSTEM.DBSDataSetACcount();
-            this.accountTableAdapter = new GOODS_INFORMATION_MANAGEMENT_SYSTEM.DBSDataSetACcountTableAdapters.accountTableAdapter();
-            this.gridimport = new System.Windows.Forms.DataGridView();
-            this.girditemimport = new System.Windows.Forms.DataGridView();
+            this.txtaddbilld = new System.Windows.Forms.TextBox();
+            this.label30 = new System.Windows.Forms.Label();
+            this.gridshowimport = new System.Windows.Forms.DataGridView();
+            this.label28 = new System.Windows.Forms.Label();
+            this.label29 = new System.Windows.Forms.Label();
+            this.txtaddquantity = new System.Windows.Forms.TextBox();
+            this.txtaddproid = new System.Windows.Forms.TextBox();
+            this.btnadditem = new System.Windows.Forms.Button();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.label21 = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
@@ -111,14 +114,25 @@ namespace GOODS_INFORMATION_MANAGEMENT_SYSTEM
             this.txtimportid = new System.Windows.Forms.TextBox();
             this.addImport = new System.Windows.Forms.Button();
             this.deleteimport = new System.Windows.Forms.Button();
-            this.btnadditem = new System.Windows.Forms.Button();
-            this.label28 = new System.Windows.Forms.Label();
-            this.label29 = new System.Windows.Forms.Label();
-            this.txtaddquantity = new System.Windows.Forms.TextBox();
-            this.txtaddproid = new System.Windows.Forms.TextBox();
-            this.gridshowimport = new System.Windows.Forms.DataGridView();
-            this.label30 = new System.Windows.Forms.Label();
-            this.txtaddbilld = new System.Windows.Forms.TextBox();
+            this.girditemimport = new System.Windows.Forms.DataGridView();
+            this.gridimport = new System.Windows.Forms.DataGridView();
+            this.accountBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dBSDataSetACcount = new GOODS_INFORMATION_MANAGEMENT_SYSTEM.DBSDataSetACcount();
+            this.accountTableAdapter = new GOODS_INFORMATION_MANAGEMENT_SYSTEM.DBSDataSetACcountTableAdapters.accountTableAdapter();
+            this.tabPage5 = new System.Windows.Forms.TabPage();
+            this.gridcusbill2 = new System.Windows.Forms.DataGridView();
+            this.gridcusbill1 = new System.Windows.Forms.DataGridView();
+            this.button1 = new System.Windows.Forms.Button();
+            this.label31 = new System.Windows.Forms.Label();
+            this.txttemp = new System.Windows.Forms.TextBox();
+            this.tabPage6 = new System.Windows.Forms.TabPage();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
+            this.label32 = new System.Windows.Forms.Label();
+            this.label33 = new System.Windows.Forms.Label();
+            this.label34 = new System.Windows.Forms.Label();
+            this.button2 = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridcus)).BeginInit();
@@ -132,12 +146,17 @@ namespace GOODS_INFORMATION_MANAGEMENT_SYSTEM
             ((System.ComponentModel.ISupportInitialize)(this.gridproduct)).BeginInit();
             this.groupBox3.SuspendLayout();
             this.tabPage4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gridshowimport)).BeginInit();
+            this.groupBox5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.girditemimport)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridimport)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.accountBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dBSDataSetACcount)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridimport)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.girditemimport)).BeginInit();
-            this.groupBox5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gridshowimport)).BeginInit();
+            this.tabPage5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gridcusbill2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridcusbill1)).BeginInit();
+            this.tabPage6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -146,6 +165,8 @@ namespace GOODS_INFORMATION_MANAGEMENT_SYSTEM
             this.tabControl1.Controls.Add(this.tabPage3);
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Controls.Add(this.tabPage4);
+            this.tabControl1.Controls.Add(this.tabPage5);
+            this.tabControl1.Controls.Add(this.tabPage6);
             this.tabControl1.Location = new System.Drawing.Point(0, 3);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
@@ -811,37 +832,80 @@ namespace GOODS_INFORMATION_MANAGEMENT_SYSTEM
             this.tabPage4.Text = "Import Bill";
             this.tabPage4.UseVisualStyleBackColor = true;
             // 
-            // accountBindingSource
+            // txtaddbilld
             // 
-            this.accountBindingSource.DataMember = "account";
-            this.accountBindingSource.DataSource = this.dBSDataSetACcount;
+            this.txtaddbilld.Enabled = false;
+            this.txtaddbilld.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtaddbilld.Location = new System.Drawing.Point(141, 592);
+            this.txtaddbilld.Name = "txtaddbilld";
+            this.txtaddbilld.Size = new System.Drawing.Size(69, 26);
+            this.txtaddbilld.TabIndex = 27;
             // 
-            // dBSDataSetACcount
+            // label30
             // 
-            this.dBSDataSetACcount.DataSetName = "DBSDataSetACcount";
-            this.dBSDataSetACcount.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.label30.AutoSize = true;
+            this.label30.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label30.Location = new System.Drawing.Point(66, 596);
+            this.label30.Name = "label30";
+            this.label30.Size = new System.Drawing.Size(45, 20);
+            this.label30.TabIndex = 26;
+            this.label30.Text = "Bill id";
             // 
-            // accountTableAdapter
+            // gridshowimport
             // 
-            this.accountTableAdapter.ClearBeforeFill = true;
+            this.gridshowimport.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.gridshowimport.Location = new System.Drawing.Point(642, 401);
+            this.gridshowimport.Name = "gridshowimport";
+            this.gridshowimport.Size = new System.Drawing.Size(444, 143);
+            this.gridshowimport.TabIndex = 24;
+            this.gridshowimport.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridshowimport_CellContentClick);
             // 
-            // gridimport
+            // label28
             // 
-            this.gridimport.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.gridimport.Location = new System.Drawing.Point(642, 3);
-            this.gridimport.Name = "gridimport";
-            this.gridimport.Size = new System.Drawing.Size(444, 382);
-            this.gridimport.TabIndex = 10;
-            this.gridimport.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridimport_CellContentClick);
+            this.label28.AutoSize = true;
+            this.label28.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label28.Location = new System.Drawing.Point(478, 598);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(68, 20);
+            this.label28.TabIndex = 23;
+            this.label28.Text = "Quantity";
             // 
-            // girditemimport
+            // label29
             // 
-            this.girditemimport.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.girditemimport.Location = new System.Drawing.Point(22, 401);
-            this.girditemimport.Name = "girditemimport";
-            this.girditemimport.Size = new System.Drawing.Size(587, 143);
-            this.girditemimport.TabIndex = 11;
-            this.girditemimport.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.girditemimport_CellContentClick);
+            this.label29.AutoSize = true;
+            this.label29.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label29.Location = new System.Drawing.Point(249, 598);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(82, 20);
+            this.label29.TabIndex = 22;
+            this.label29.Text = "Product Id";
+            // 
+            // txtaddquantity
+            // 
+            this.txtaddquantity.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtaddquantity.Location = new System.Drawing.Point(587, 592);
+            this.txtaddquantity.Name = "txtaddquantity";
+            this.txtaddquantity.Size = new System.Drawing.Size(105, 26);
+            this.txtaddquantity.TabIndex = 21;
+            // 
+            // txtaddproid
+            // 
+            this.txtaddproid.Enabled = false;
+            this.txtaddproid.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtaddproid.Location = new System.Drawing.Point(366, 592);
+            this.txtaddproid.Name = "txtaddproid";
+            this.txtaddproid.Size = new System.Drawing.Size(69, 26);
+            this.txtaddproid.TabIndex = 20;
+            // 
+            // btnadditem
+            // 
+            this.btnadditem.Location = new System.Drawing.Point(716, 575);
+            this.btnadditem.Name = "btnadditem";
+            this.btnadditem.Size = new System.Drawing.Size(118, 43);
+            this.btnadditem.TabIndex = 19;
+            this.btnadditem.Text = "ADD ITEM";
+            this.btnadditem.UseVisualStyleBackColor = true;
+            this.btnadditem.Click += new System.EventHandler(this.btnadditem_Click);
             // 
             // groupBox5
             // 
@@ -976,86 +1040,179 @@ namespace GOODS_INFORMATION_MANAGEMENT_SYSTEM
             this.deleteimport.UseVisualStyleBackColor = true;
             this.deleteimport.Click += new System.EventHandler(this.deleteimport_Click);
             // 
-            // btnadditem
+            // girditemimport
             // 
-            this.btnadditem.Location = new System.Drawing.Point(716, 575);
-            this.btnadditem.Name = "btnadditem";
-            this.btnadditem.Size = new System.Drawing.Size(118, 43);
-            this.btnadditem.TabIndex = 19;
-            this.btnadditem.Text = "ADD ITEM";
-            this.btnadditem.UseVisualStyleBackColor = true;
-            this.btnadditem.Click += new System.EventHandler(this.btnadditem_Click);
+            this.girditemimport.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.girditemimport.Location = new System.Drawing.Point(22, 401);
+            this.girditemimport.Name = "girditemimport";
+            this.girditemimport.Size = new System.Drawing.Size(587, 143);
+            this.girditemimport.TabIndex = 11;
+            this.girditemimport.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.girditemimport_CellContentClick);
             // 
-            // label28
+            // gridimport
             // 
-            this.label28.AutoSize = true;
-            this.label28.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label28.Location = new System.Drawing.Point(478, 598);
-            this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(68, 20);
-            this.label28.TabIndex = 23;
-            this.label28.Text = "Quantity";
+            this.gridimport.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.gridimport.Location = new System.Drawing.Point(642, 3);
+            this.gridimport.Name = "gridimport";
+            this.gridimport.Size = new System.Drawing.Size(444, 382);
+            this.gridimport.TabIndex = 10;
+            this.gridimport.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridimport_CellContentClick);
             // 
-            // label29
+            // accountBindingSource
             // 
-            this.label29.AutoSize = true;
-            this.label29.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label29.Location = new System.Drawing.Point(249, 598);
-            this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(82, 20);
-            this.label29.TabIndex = 22;
-            this.label29.Text = "Product Id";
+            this.accountBindingSource.DataMember = "account";
+            this.accountBindingSource.DataSource = this.dBSDataSetACcount;
             // 
-            // txtaddquantity
+            // dBSDataSetACcount
             // 
-            this.txtaddquantity.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtaddquantity.Location = new System.Drawing.Point(587, 592);
-            this.txtaddquantity.Name = "txtaddquantity";
-            this.txtaddquantity.Size = new System.Drawing.Size(105, 26);
-            this.txtaddquantity.TabIndex = 21;
+            this.dBSDataSetACcount.DataSetName = "DBSDataSetACcount";
+            this.dBSDataSetACcount.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // txtaddproid
+            // accountTableAdapter
             // 
-            this.txtaddproid.Enabled = false;
-            this.txtaddproid.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtaddproid.Location = new System.Drawing.Point(366, 592);
-            this.txtaddproid.Name = "txtaddproid";
-            this.txtaddproid.Size = new System.Drawing.Size(69, 26);
-            this.txtaddproid.TabIndex = 20;
+            this.accountTableAdapter.ClearBeforeFill = true;
             // 
-            // gridshowimport
+            // tabPage5
             // 
-            this.gridshowimport.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.gridshowimport.Location = new System.Drawing.Point(642, 401);
-            this.gridshowimport.Name = "gridshowimport";
-            this.gridshowimport.Size = new System.Drawing.Size(444, 143);
-            this.gridshowimport.TabIndex = 24;
-            this.gridshowimport.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridshowimport_CellContentClick);
+            this.tabPage5.Controls.Add(this.label31);
+            this.tabPage5.Controls.Add(this.txttemp);
+            this.tabPage5.Controls.Add(this.button1);
+            this.tabPage5.Controls.Add(this.gridcusbill2);
+            this.tabPage5.Controls.Add(this.gridcusbill1);
+            this.tabPage5.Location = new System.Drawing.Point(4, 22);
+            this.tabPage5.Name = "tabPage5";
+            this.tabPage5.Size = new System.Drawing.Size(1089, 625);
+            this.tabPage5.TabIndex = 4;
+            this.tabPage5.Text = "Customer bill";
+            this.tabPage5.UseVisualStyleBackColor = true;
             // 
-            // label30
+            // gridcusbill2
             // 
-            this.label30.AutoSize = true;
-            this.label30.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label30.Location = new System.Drawing.Point(66, 596);
-            this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(45, 20);
-            this.label30.TabIndex = 26;
-            this.label30.Text = "Bill id";
+            this.gridcusbill2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.gridcusbill2.Location = new System.Drawing.Point(547, 3);
+            this.gridcusbill2.Name = "gridcusbill2";
+            this.gridcusbill2.Size = new System.Drawing.Size(539, 518);
+            this.gridcusbill2.TabIndex = 26;
             // 
-            // txtaddbilld
+            // gridcusbill1
             // 
-            this.txtaddbilld.Enabled = false;
-            this.txtaddbilld.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtaddbilld.Location = new System.Drawing.Point(141, 592);
-            this.txtaddbilld.Name = "txtaddbilld";
-            this.txtaddbilld.Size = new System.Drawing.Size(69, 26);
-            this.txtaddbilld.TabIndex = 27;
+            this.gridcusbill1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.gridcusbill1.Location = new System.Drawing.Point(8, 3);
+            this.gridcusbill1.Name = "gridcusbill1";
+            this.gridcusbill1.Size = new System.Drawing.Size(533, 518);
+            this.gridcusbill1.TabIndex = 25;
+            this.gridcusbill1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridcusbill1_CellContentClick);
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(423, 538);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(118, 43);
+            this.button1.TabIndex = 27;
+            this.button1.Text = "being transferred";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            // 
+            // label31
+            // 
+            this.label31.AutoSize = true;
+            this.label31.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label31.Location = new System.Drawing.Point(205, 561);
+            this.label31.Name = "label31";
+            this.label31.Size = new System.Drawing.Size(45, 20);
+            this.label31.TabIndex = 29;
+            this.label31.Text = "Bill id";
+            // 
+            // txttemp
+            // 
+            this.txttemp.Enabled = false;
+            this.txttemp.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txttemp.Location = new System.Drawing.Point(322, 555);
+            this.txttemp.Name = "txttemp";
+            this.txttemp.Size = new System.Drawing.Size(69, 26);
+            this.txttemp.TabIndex = 28;
+            // 
+            // tabPage6
+            // 
+            this.tabPage6.Controls.Add(this.button2);
+            this.tabPage6.Controls.Add(this.label34);
+            this.tabPage6.Controls.Add(this.label33);
+            this.tabPage6.Controls.Add(this.label32);
+            this.tabPage6.Controls.Add(this.dateTimePicker2);
+            this.tabPage6.Controls.Add(this.dateTimePicker1);
+            this.tabPage6.Controls.Add(this.dataGridView1);
+            this.tabPage6.Location = new System.Drawing.Point(4, 22);
+            this.tabPage6.Name = "tabPage6";
+            this.tabPage6.Size = new System.Drawing.Size(1089, 625);
+            this.tabPage6.TabIndex = 5;
+            this.tabPage6.Text = "Statictis";
+            this.tabPage6.UseVisualStyleBackColor = true;
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(312, 3);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(774, 626);
+            this.dataGridView1.TabIndex = 27;
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateTimePicker1.Location = new System.Drawing.Point(106, 160);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
+            this.dateTimePicker1.TabIndex = 28;
+            // 
+            // dateTimePicker2
+            // 
+            this.dateTimePicker2.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateTimePicker2.Location = new System.Drawing.Point(106, 211);
+            this.dateTimePicker2.Name = "dateTimePicker2";
+            this.dateTimePicker2.Size = new System.Drawing.Size(200, 20);
+            this.dateTimePicker2.TabIndex = 29;
+            // 
+            // label32
+            // 
+            this.label32.AutoSize = true;
+            this.label32.Location = new System.Drawing.Point(28, 167);
+            this.label32.Name = "label32";
+            this.label32.Size = new System.Drawing.Size(53, 13);
+            this.label32.TabIndex = 30;
+            this.label32.Text = "Date start";
+            // 
+            // label33
+            // 
+            this.label33.AutoSize = true;
+            this.label33.Location = new System.Drawing.Point(28, 167);
+            this.label33.Name = "label33";
+            this.label33.Size = new System.Drawing.Size(0, 13);
+            this.label33.TabIndex = 30;
+            // 
+            // label34
+            // 
+            this.label34.AutoSize = true;
+            this.label34.Location = new System.Drawing.Point(30, 217);
+            this.label34.Name = "label34";
+            this.label34.Size = new System.Drawing.Size(51, 13);
+            this.label34.TabIndex = 31;
+            this.label34.Text = "Date end";
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(231, 263);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.TabIndex = 32;
+            this.button2.Text = "View";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1275, 652);
+            this.ClientSize = new System.Drawing.Size(1096, 652);
             this.Controls.Add(this.tabControl1);
             this.Name = "Main";
             this.Text = "Main";
@@ -1078,13 +1235,20 @@ namespace GOODS_INFORMATION_MANAGEMENT_SYSTEM
             this.groupBox3.PerformLayout();
             this.tabPage4.ResumeLayout(false);
             this.tabPage4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.accountBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dBSDataSetACcount)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridimport)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.girditemimport)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridshowimport)).EndInit();
             this.groupBox5.ResumeLayout(false);
             this.groupBox5.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gridshowimport)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.girditemimport)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridimport)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.accountBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dBSDataSetACcount)).EndInit();
+            this.tabPage5.ResumeLayout(false);
+            this.tabPage5.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gridcusbill2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridcusbill1)).EndInit();
+            this.tabPage6.ResumeLayout(false);
+            this.tabPage6.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1180,5 +1344,19 @@ namespace GOODS_INFORMATION_MANAGEMENT_SYSTEM
         private System.Windows.Forms.DataGridView gridshowimport;
         private System.Windows.Forms.TextBox txtaddbilld;
         private System.Windows.Forms.Label label30;
+        private System.Windows.Forms.TabPage tabPage5;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.DataGridView gridcusbill2;
+        private System.Windows.Forms.DataGridView gridcusbill1;
+        private System.Windows.Forms.Label label31;
+        private System.Windows.Forms.TextBox txttemp;
+        private System.Windows.Forms.TabPage tabPage6;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Label label34;
+        private System.Windows.Forms.Label label33;
+        private System.Windows.Forms.Label label32;
+        private System.Windows.Forms.DateTimePicker dateTimePicker2;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }

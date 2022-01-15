@@ -57,15 +57,20 @@ foreign key (productid) references product(id),
 foreign key (customerid) references customer(id),
 )
 
+
+
 create table customerbill(
 id int IDENTITY(1,1) primary key,
 productid int, 
 customerid int,
 quantity int,
+status varchar(10),
+datecreate date default CURRENT_TIMESTAMP,
 foreign key (productid) references product(id),
 foreign key (customerid) references customer(id),
 )
 
 
 
+update customerbill set status='be trans.'  where id=1
 select price,product_billimport.quantity from product, product_billimport  where billid= id and id=4

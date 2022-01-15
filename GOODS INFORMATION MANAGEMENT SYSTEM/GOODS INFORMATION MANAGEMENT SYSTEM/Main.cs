@@ -31,6 +31,8 @@ namespace GOODS_INFORMATION_MANAGEMENT_SYSTEM
             fillCate();
             fillimport();
             fillItem();
+            fillgridcusbill1();
+            fillgridcusbill2();
         }
 
         private void tabPage3_Click(object sender, EventArgs e)
@@ -589,6 +591,89 @@ namespace GOODS_INFORMATION_MANAGEMENT_SYSTEM
             catch
             {
                 MessageBox.Show("There are some error!!!");
+            }
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            try
+            {
+                sqlConnection.Open();
+                SqlCommand sqlCommand = new SqlCommand("update customerbill set status='be trans.'  where id=" + txttemp.Text , sqlConnection);
+                sqlCommand.ExecuteNonQuery();
+                MessageBox.Show("Successful");
+                sqlConnection.Close();
+                fillgridcusbill1();
+                fillgridcusbill2();
+            }
+            catch
+            {
+                MessageBox.Show("There are some error!!!");
+            }
+        }
+
+        private void gridcusbill1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            DataGridViewRow row = gridimport.Rows[e.RowIndex];
+            string id = row.Cells[0].Value.ToString();
+            txttemp.Text = id;
+            fillAddeditem(id);
+        }
+
+        private void fillgridcusbill1()
+        {
+            try
+            {
+                sqlConnection.Open();
+                SqlCommand sqlCommand = new SqlCommand("select * from customerbill where status='paid'", sqlConnection);
+                SqlDataAdapter sqlDataAdapter = new SqlDataAdapter(sqlCommand);
+                DataTable dataTable = new DataTable();
+                sqlDataAdapter.Fill(dataTable);
+                gridcusbill1.DataSource = dataTable;
+                sqlDataAdapter.Dispose();
+                sqlConnection.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("There are some error from product dbs");
+            }
+        }
+
+        private void fillgridcusbill2()
+        {
+            try
+            {
+                sqlConnection.Open();
+                SqlCommand sqlCommand = new SqlCommand("select * from customerbill where status='be trans.'", sqlConnection);
+                SqlDataAdapter sqlDataAdapter = new SqlDataAdapter(sqlCommand);
+                DataTable dataTable = new DataTable();
+                sqlDataAdapter.Fill(dataTable);
+                gridcusbill2.DataSource = dataTable;
+                sqlDataAdapter.Dispose();
+                sqlConnection.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("There are some error from product dbs");
+            }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                sqlConnection.Open();
+                SqlCommand sqlCommand = new SqlCommand("select * from customerbill where ", sqlConnection);
+                SqlDataAdapter sqlDataAdapter = new SqlDataAdapter(sqlCommand);
+                DataTable dataTable = new DataTable();
+                sqlDataAdapter.Fill(dataTable);
+                gridcusbill2.DataSource = dataTable;
+                sqlDataAdapter.Dispose();
+                sqlConnection.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("There are some error from product dbs");
             }
         }
     }
