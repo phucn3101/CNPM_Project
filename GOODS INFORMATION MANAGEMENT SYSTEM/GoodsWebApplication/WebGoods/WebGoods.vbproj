@@ -50,10 +50,10 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+      <HintPath>..\..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <HintPath>..\..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -158,6 +158,9 @@
     <Compile Include="App_Start\BundleConfig.vb" />
     <Compile Include="App_Start\FilterConfig.vb" />
     <Compile Include="App_Start\RouteConfig.vb" />
+    <Compile Include="Controllers\customerbillsController.vb" />
+    <Compile Include="Controllers\customersController.vb" />
+    <Compile Include="Controllers\productsController.vb" />
     <Compile Include="Global.asax.vb">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -273,6 +276,21 @@
     <Content Include="Scripts\jquery-3.4.1.slim.min.js" />
     <Content Include="Scripts\jquery-3.4.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.4.1.min.map" />
+    <Content Include="Views\customers\Create.vbhtml" />
+    <Content Include="Views\customers\Delete.vbhtml" />
+    <Content Include="Views\customers\Details.vbhtml" />
+    <Content Include="Views\customers\Edit.vbhtml" />
+    <Content Include="Views\customers\Index.vbhtml" />
+    <Content Include="Views\customerbills\Create.vbhtml" />
+    <Content Include="Views\customerbills\Delete.vbhtml" />
+    <Content Include="Views\customerbills\Details.vbhtml" />
+    <Content Include="Views\customerbills\Edit.vbhtml" />
+    <Content Include="Views\customerbills\Index.vbhtml" />
+    <Content Include="Views\products\Create.vbhtml" />
+    <Content Include="Views\products\Delete.vbhtml" />
+    <Content Include="Views\products\Details.vbhtml" />
+    <Content Include="Views\products\Edit.vbhtml" />
+    <Content Include="Views\products\Index.vbhtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="favicon.ico" />

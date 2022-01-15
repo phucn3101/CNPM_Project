@@ -116,23 +116,26 @@ namespace GOODS_INFORMATION_MANAGEMENT_SYSTEM
             this.deleteimport = new System.Windows.Forms.Button();
             this.girditemimport = new System.Windows.Forms.DataGridView();
             this.gridimport = new System.Windows.Forms.DataGridView();
+            this.tabPage5 = new System.Windows.Forms.TabPage();
+            this.label31 = new System.Windows.Forms.Label();
+            this.txttemp = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.gridcusbill2 = new System.Windows.Forms.DataGridView();
+            this.gridcusbill1 = new System.Windows.Forms.DataGridView();
+            this.tabPage6 = new System.Windows.Forms.TabPage();
+            this.button2 = new System.Windows.Forms.Button();
+            this.label34 = new System.Windows.Forms.Label();
+            this.label33 = new System.Windows.Forms.Label();
+            this.label32 = new System.Windows.Forms.Label();
+            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.accountBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dBSDataSetACcount = new GOODS_INFORMATION_MANAGEMENT_SYSTEM.DBSDataSetACcount();
             this.accountTableAdapter = new GOODS_INFORMATION_MANAGEMENT_SYSTEM.DBSDataSetACcountTableAdapters.accountTableAdapter();
-            this.tabPage5 = new System.Windows.Forms.TabPage();
-            this.gridcusbill2 = new System.Windows.Forms.DataGridView();
-            this.gridcusbill1 = new System.Windows.Forms.DataGridView();
-            this.button1 = new System.Windows.Forms.Button();
-            this.label31 = new System.Windows.Forms.Label();
-            this.txttemp = new System.Windows.Forms.TextBox();
-            this.tabPage6 = new System.Windows.Forms.TabPage();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
-            this.label32 = new System.Windows.Forms.Label();
-            this.label33 = new System.Windows.Forms.Label();
-            this.label34 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
+            this.label35 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label36 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridcus)).BeginInit();
@@ -150,13 +153,13 @@ namespace GOODS_INFORMATION_MANAGEMENT_SYSTEM
             this.groupBox5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.girditemimport)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridimport)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.accountBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dBSDataSetACcount)).BeginInit();
             this.tabPage5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridcusbill2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridcusbill1)).BeginInit();
             this.tabPage6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.accountBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dBSDataSetACcount)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -1058,20 +1061,6 @@ namespace GOODS_INFORMATION_MANAGEMENT_SYSTEM
             this.gridimport.TabIndex = 10;
             this.gridimport.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridimport_CellContentClick);
             // 
-            // accountBindingSource
-            // 
-            this.accountBindingSource.DataMember = "account";
-            this.accountBindingSource.DataSource = this.dBSDataSetACcount;
-            // 
-            // dBSDataSetACcount
-            // 
-            this.dBSDataSetACcount.DataSetName = "DBSDataSetACcount";
-            this.dBSDataSetACcount.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // accountTableAdapter
-            // 
-            this.accountTableAdapter.ClearBeforeFill = true;
-            // 
             // tabPage5
             // 
             this.tabPage5.Controls.Add(this.label31);
@@ -1085,33 +1074,6 @@ namespace GOODS_INFORMATION_MANAGEMENT_SYSTEM
             this.tabPage5.TabIndex = 4;
             this.tabPage5.Text = "Customer bill";
             this.tabPage5.UseVisualStyleBackColor = true;
-            // 
-            // gridcusbill2
-            // 
-            this.gridcusbill2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.gridcusbill2.Location = new System.Drawing.Point(547, 3);
-            this.gridcusbill2.Name = "gridcusbill2";
-            this.gridcusbill2.Size = new System.Drawing.Size(539, 518);
-            this.gridcusbill2.TabIndex = 26;
-            // 
-            // gridcusbill1
-            // 
-            this.gridcusbill1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.gridcusbill1.Location = new System.Drawing.Point(8, 3);
-            this.gridcusbill1.Name = "gridcusbill1";
-            this.gridcusbill1.Size = new System.Drawing.Size(533, 518);
-            this.gridcusbill1.TabIndex = 25;
-            this.gridcusbill1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridcusbill1_CellContentClick);
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(423, 538);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(118, 43);
-            this.button1.TabIndex = 27;
-            this.button1.Text = "being transferred";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // label31
             // 
@@ -1132,8 +1094,38 @@ namespace GOODS_INFORMATION_MANAGEMENT_SYSTEM
             this.txttemp.Size = new System.Drawing.Size(69, 26);
             this.txttemp.TabIndex = 28;
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(423, 538);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(118, 43);
+            this.button1.TabIndex = 27;
+            this.button1.Text = "being transferred";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            // 
+            // gridcusbill2
+            // 
+            this.gridcusbill2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.gridcusbill2.Location = new System.Drawing.Point(547, 3);
+            this.gridcusbill2.Name = "gridcusbill2";
+            this.gridcusbill2.Size = new System.Drawing.Size(539, 518);
+            this.gridcusbill2.TabIndex = 26;
+            // 
+            // gridcusbill1
+            // 
+            this.gridcusbill1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.gridcusbill1.Location = new System.Drawing.Point(8, 3);
+            this.gridcusbill1.Name = "gridcusbill1";
+            this.gridcusbill1.Size = new System.Drawing.Size(533, 518);
+            this.gridcusbill1.TabIndex = 25;
+            this.gridcusbill1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridcusbill1_CellContentClick);
+            // 
             // tabPage6
             // 
+            this.tabPage6.Controls.Add(this.label36);
+            this.tabPage6.Controls.Add(this.textBox1);
+            this.tabPage6.Controls.Add(this.label35);
             this.tabPage6.Controls.Add(this.button2);
             this.tabPage6.Controls.Add(this.label34);
             this.tabPage6.Controls.Add(this.label33);
@@ -1148,46 +1140,15 @@ namespace GOODS_INFORMATION_MANAGEMENT_SYSTEM
             this.tabPage6.Text = "Statictis";
             this.tabPage6.UseVisualStyleBackColor = true;
             // 
-            // dataGridView1
+            // button2
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(312, 3);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(774, 626);
-            this.dataGridView1.TabIndex = 27;
-            // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker1.Location = new System.Drawing.Point(106, 160);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePicker1.TabIndex = 28;
-            // 
-            // dateTimePicker2
-            // 
-            this.dateTimePicker2.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker2.Location = new System.Drawing.Point(106, 211);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePicker2.TabIndex = 29;
-            // 
-            // label32
-            // 
-            this.label32.AutoSize = true;
-            this.label32.Location = new System.Drawing.Point(28, 167);
-            this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(53, 13);
-            this.label32.TabIndex = 30;
-            this.label32.Text = "Date start";
-            // 
-            // label33
-            // 
-            this.label33.AutoSize = true;
-            this.label33.Location = new System.Drawing.Point(28, 167);
-            this.label33.Name = "label33";
-            this.label33.Size = new System.Drawing.Size(0, 13);
-            this.label33.TabIndex = 30;
+            this.button2.Location = new System.Drawing.Point(231, 345);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.TabIndex = 32;
+            this.button2.Text = "View";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // label34
             // 
@@ -1198,15 +1159,88 @@ namespace GOODS_INFORMATION_MANAGEMENT_SYSTEM
             this.label34.TabIndex = 31;
             this.label34.Text = "Date end";
             // 
-            // button2
+            // label33
             // 
-            this.button2.Location = new System.Drawing.Point(231, 263);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 32;
-            this.button2.Text = "View";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.label33.AutoSize = true;
+            this.label33.Location = new System.Drawing.Point(28, 167);
+            this.label33.Name = "label33";
+            this.label33.Size = new System.Drawing.Size(0, 13);
+            this.label33.TabIndex = 30;
+            // 
+            // label32
+            // 
+            this.label32.AutoSize = true;
+            this.label32.Location = new System.Drawing.Point(28, 167);
+            this.label32.Name = "label32";
+            this.label32.Size = new System.Drawing.Size(53, 13);
+            this.label32.TabIndex = 30;
+            this.label32.Text = "Date start";
+            // 
+            // dateTimePicker2
+            // 
+            this.dateTimePicker2.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateTimePicker2.Location = new System.Drawing.Point(106, 211);
+            this.dateTimePicker2.Name = "dateTimePicker2";
+            this.dateTimePicker2.Size = new System.Drawing.Size(200, 20);
+            this.dateTimePicker2.TabIndex = 29;
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateTimePicker1.Location = new System.Drawing.Point(106, 160);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
+            this.dateTimePicker1.TabIndex = 28;
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(312, 3);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(774, 626);
+            this.dataGridView1.TabIndex = 27;
+            // 
+            // accountBindingSource
+            // 
+            this.accountBindingSource.DataMember = "account";
+            this.accountBindingSource.DataSource = this.dBSDataSetACcount;
+            // 
+            // dBSDataSetACcount
+            // 
+            this.dBSDataSetACcount.DataSetName = "DBSDataSetACcount";
+            this.dBSDataSetACcount.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // accountTableAdapter
+            // 
+            this.accountTableAdapter.ClearBeforeFill = true;
+            // 
+            // label35
+            // 
+            this.label35.AutoSize = true;
+            this.label35.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label35.Location = new System.Drawing.Point(8, 282);
+            this.label35.Name = "label35";
+            this.label35.Size = new System.Drawing.Size(87, 24);
+            this.label35.TabIndex = 33;
+            this.label35.Text = "Revenue";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.Location = new System.Drawing.Point(101, 279);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(149, 29);
+            this.textBox1.TabIndex = 34;
+            // 
+            // label36
+            // 
+            this.label36.AutoSize = true;
+            this.label36.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label36.Location = new System.Drawing.Point(256, 282);
+            this.label36.Name = "label36";
+            this.label36.Size = new System.Drawing.Size(50, 24);
+            this.label36.TabIndex = 35;
+            this.label36.Text = "VND";
             // 
             // Main
             // 
@@ -1240,8 +1274,6 @@ namespace GOODS_INFORMATION_MANAGEMENT_SYSTEM
             this.groupBox5.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.girditemimport)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridimport)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.accountBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dBSDataSetACcount)).EndInit();
             this.tabPage5.ResumeLayout(false);
             this.tabPage5.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridcusbill2)).EndInit();
@@ -1249,6 +1281,8 @@ namespace GOODS_INFORMATION_MANAGEMENT_SYSTEM
             this.tabPage6.ResumeLayout(false);
             this.tabPage6.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.accountBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dBSDataSetACcount)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1358,5 +1392,8 @@ namespace GOODS_INFORMATION_MANAGEMENT_SYSTEM
         private System.Windows.Forms.DateTimePicker dateTimePicker2;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Label label36;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label label35;
     }
 }

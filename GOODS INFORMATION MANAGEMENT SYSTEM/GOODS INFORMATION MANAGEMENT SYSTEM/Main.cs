@@ -663,17 +663,32 @@ namespace GOODS_INFORMATION_MANAGEMENT_SYSTEM
             try
             {
                 sqlConnection.Open();
-                SqlCommand sqlCommand = new SqlCommand("select * from customerbill where ", sqlConnection);
+                SqlCommand sqlCommand = new SqlCommand("select * from customerbill where datecreate >='"+ dateTimePicker1.Value.Date+ "' and datecreate <='" + dateTimePicker2.Value.Date+"'", sqlConnection);
                 SqlDataAdapter sqlDataAdapter = new SqlDataAdapter(sqlCommand);
                 DataTable dataTable = new DataTable();
                 sqlDataAdapter.Fill(dataTable);
-                gridcusbill2.DataSource = dataTable;
+                dataGridView1.DataSource = dataTable;
                 sqlDataAdapter.Dispose();
+
+
+                SqlCommand sqlCommand1 = new SqlCommand("select sum(customerbill.quantity* price) as total from customerbill, product where datecreate >='" + dateTimePicker1.Value.Date + "' and datecreate <='" + dateTimePicker2.Value.Date + "' and product.id=customerbill.id", sqlConnection);
+                SqlDataAdapter sqlDataAdapter1 = new SqlDataAdapter(sqlCommand1);
+                DataTable dataTable1 = new DataTable();
+                sqlDataAdapter1.Fill(dataTable1);
+                if (dataTable1.Rows.Count > 0)
+                {
+                    textBox1.Text = dataTable1.Rows[0]["total"].ToString();
+                }
+                else
+                {
+                    textBox1.Text = "0";
+                }
+                sqlDataAdapter1.Dispose();
                 sqlConnection.Close();
             }
             catch (Exception ex)
             {
-                MessageBox.Show("There are some error from product dbs");
+                MessageBox.Show(ex.Message);
             }
         }
     }

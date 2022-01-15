@@ -72,5 +72,5 @@ foreign key (customerid) references customer(id),
 
 
 
-update customerbill set status='be trans.'  where id=1
+select customerbill.quantity, price from  customerbill, product   where product.id=customerbill.id
 select price,product_billimport.quantity from product, product_billimport  where billid= id and id=4

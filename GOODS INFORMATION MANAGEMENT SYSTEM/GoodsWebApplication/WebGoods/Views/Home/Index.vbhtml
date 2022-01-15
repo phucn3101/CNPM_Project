@@ -1,31 +1,54 @@
-﻿@Code
-    ViewData("Title") = "Home Page"
+﻿@ModelType IEnumerable(Of WebGoods.product)
+@Code
+    ViewData("Title") = "Index"
 End Code
 
-<div class="jumbotron">
-    <h1>ASP.NET</h1>
-    <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
-    <p><a href="https://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
-</div>
+<h2>Index</h2>
 
-<div class="row">
-    <div class="col-md-4">
-        <h2>Getting started</h2>
-        <p>
-            ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
-            enables a clean separation of concerns and gives you full control over markup
-            for enjoyable, agile development.
-        </p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
-    </div>
-    <div class="col-md-4">
-        <h2>Get more libraries</h2>
-        <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.</p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>
-    </div>
-    <div class="col-md-4">
-        <h2>Web Hosting</h2>
-        <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
-    </div>
-</div>
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+           
+        </th>
+        <th>
+            @Html.DisplayNameFor(Function(model) model.name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(Function(model) model.description)
+        </th>
+        <th>
+            @Html.DisplayNameFor(Function(model) model.price)
+        </th>
+        <th>
+            @Html.DisplayNameFor(Function(model) model.category.name)
+        </th>
+        <th></th>
+    </tr>
+
+    @For Each item In Model
+        @<tr>
+    <td>
+       <img src="@Html.DisplayFor(Function(modelItem) item.img)" class="thumbnail"/> 
+    </td>
+    <td>
+        @Html.DisplayFor(Function(modelItem) item.name)
+    </td>
+    <td>
+        @Html.DisplayFor(Function(modelItem) item.description)
+    </td>
+    <td>
+        @Html.DisplayFor(Function(modelItem) item.price)
+    </td>
+    <td>
+        @Html.DisplayFor(Function(modelItem) item.category.name)
+    </td>
+    <td>
+        @Html.ActionLink("Details", "Details", New With {.id = item.id})
+    </td>
+</tr>
+    Next
+
+</table>
